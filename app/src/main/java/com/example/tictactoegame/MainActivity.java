@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,10 +23,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView textViewPlayer1;
     private TextView textViewPlayer2;
 
+    private LinearLayout backgroundCol;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        backgroundCol = findViewById(R.id.linearBackgroundCol);
 
         textViewPlayer1 = findViewById(R.id.text_view_p1);
         textViewPlayer2 = findViewById(R.id.text_view_p2);
@@ -46,6 +52,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
     }
 
+    public void goDark(View v){
+        backgroundCol.setBackgroundResource(R.color.colorPrimaryDark);
+    }
     @Override
     public void onClick(View v) {
         if (!((Button) v).getText().toString().equals("")){
@@ -87,7 +96,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if (field [i][0].equals(field[i][1])
                     && field[i][0].equals(field[i][2])
                     && !field[i][0].equals("")){
-                return true;
+               return true;
             }
         }
 
