@@ -16,4 +16,5 @@
     Vajalik SDK, mille alla laadisin oli Android 9.0 (Pie), sest oli tarvis emulaatorit jooksutada.
 
 9. Git projektis on README.md, kus kirjeldatakse juhendi muudest muutustest rakenduse terviklikumaks muutmise nimel.
+    Tekitasin nupu, et muuta taustavärvi, värvi võtab colors.xml-st.
     
